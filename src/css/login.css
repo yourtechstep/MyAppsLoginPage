@@ -1,0 +1,213 @@
+/* ============================================
+   LOGIN PAGE SPECIFIC STYLES
+   ============================================ */
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: var(--spacing-md);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.login-card {
+    background-color: var(--white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: var(--spacing-2xl);
+    width: 100%;
+    max-width: 420px;
+    animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.logo {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+.logo h1 {
+    color: var(--primary-color);
+    font-size: var(--font-size-2xl);
+    margin: 0;
+}
+
+.login-card h2 {
+    text-align: center;
+    color: var(--text-dark);
+    margin-bottom: var(--spacing-sm);
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-xl);
+    font-size: var(--font-size-sm);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: var(--spacing-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--text-dark);
+}
+
+.form-group input {
+    padding: var(--spacing-md);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-base);
+    transition: var(--transition);
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+.form-group input.error {
+    border-color: var(--danger-color);
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+}
+
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.form-group.checkbox input {
+    width: auto;
+    cursor: pointer;
+}
+
+.form-group.checkbox label {
+    margin-bottom: 0;
+    cursor: pointer;
+    font-weight: var(--font-weight-normal);
+}
+
+.error-message {
+    display: none;
+    color: var(--danger-color);
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-xs);
+}
+
+.error-message.show {
+    display: block;
+}
+
+.forgot-password {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: var(--font-size-sm);
+    margin-top: var(--spacing-md);
+    transition: var(--transition);
+}
+
+.forgot-password:hover {
+    color: var(--primary-dark);
+}
+
+.divider {
+    text-align: center;
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+    margin: var(--spacing-lg) 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    z-index: 0;
+}
+
+.divider {
+    position: relative;
+    z-index: 1;
+    background-color: var(--white);
+    padding: 0 var(--spacing-md);
+    display: inline-block;
+    width: 100%;
+}
+
+.signup-section {
+    text-align: center;
+}
+
+.signup-section p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+}
+
+.signup-link {
+    color: var(--primary-color);
+    font-weight: var(--font-weight-medium);
+}
+
+.signup-link:hover {
+    color: var(--primary-dark);
+}
+
+/* ============================================
+   MOBILE RESPONSIVE
+   ============================================ */
+
+@media (max-width: 640px) {
+    .login-card {
+        padding: var(--spacing-xl);
+        border-radius: var(--radius-lg);
+    }
+
+    .login-card h2 {
+        font-size: var(--font-size-xl);
+    }
+
+    .logo h1 {
+        font-size: var(--font-size-xl);
+    }
+
+    .login-form {
+        gap: var(--spacing-md);
+    }
+}
+
+/* ============================================
+   TABLET RESPONSIVE
+   ============================================ */
+
+@media (min-width: 641px) and (max-width: 1024px) {
+    .login-card {
+        max-width: 450px;
+    }
+}
